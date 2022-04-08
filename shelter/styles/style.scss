@@ -1,0 +1,11 @@
+@import "_normalize";
+@import "_fonts";
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+// sass --watch shelter/styles/style.scss shelter/styles/style.css
