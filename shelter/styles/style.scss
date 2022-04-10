@@ -176,14 +176,12 @@ a {
   box-sizing: border-box;
   padding: 15px 45px;
   min-height: 52px;
+
   border-radius: 100px;
   color: $color-dark-3xl;
 
-  a {
-    font-size: 17px;
-    line-height: 130%;
-    color: inherit;
-  }
+  font-size: 17px;
+  line-height: 130%;
 }
 
 .button--filled {
@@ -203,7 +201,7 @@ a {
 
 .button--border {
   border: 2px solid $color-primary;
-  background-color: $color-light-xl;
+  // background-color: $color-light-xl;
   transition: background-color 0.2s ease-in;
 
   &:hover {
@@ -286,9 +284,6 @@ a {
     }
   }
 
-  &__img {
-  }
-
   &__content {
     max-width: 430px;
 
@@ -300,9 +295,65 @@ a {
   &__h2 {
     max-width: 370px;
   }
+}
 
-  &__caption {
+.pets {
+  padding: 80px 0 100px;
+  background-color: $color-light-l;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
+
+  &__heading {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+  }
+}
+
+.silder__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 990px;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-light-s;
+  border-radius: 9px;
+
+  & > * {
+    margin-bottom: 30px;
+  }
+}
+.pet-name {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
 }
 
 // sass --watch shelter/styles/style.scss shelter/styles/style.css

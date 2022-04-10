@@ -527,11 +527,8 @@ a {
   min-height: 52px;
   border-radius: 100px;
   color: #292929;
-}
-.button a {
   font-size: 17px;
   line-height: 130%;
-  color: inherit;
 }
 
 .button--filled {
@@ -549,7 +546,6 @@ a {
 
 .button--border {
   border: 2px solid #f1cdb3;
-  background-color: #ffffff;
   transition: background-color 0.2s ease-in;
 }
 .button--border:hover {
@@ -633,6 +629,61 @@ a {
 }
 .about__h2 {
   max-width: 370px;
+}
+
+.pets {
+  padding: 80px 0 100px;
+  background-color: #f6f6f6;
+}
+.pets__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pets__container > *:not(:last-child) {
+  margin-bottom: 60px;
+}
+.pets__heading {
+  max-width: 400px;
+  text-align: center;
+}
+.pets__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 25px;
+}
+
+.silder__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 990px;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 9px;
+}
+.pet-card > * {
+  margin-bottom: 30px;
+}
+
+.pet-name {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 /*# sourceMappingURL=style.css.map */
