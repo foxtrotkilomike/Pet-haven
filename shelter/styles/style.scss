@@ -165,6 +165,16 @@ a {
   color: $color-dark-xl;
 }
 
+.paragraph--small {
+  margin: 0;
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-dark-m;
+}
+
 .button-container {
   display: inline-flex;
 }
@@ -406,4 +416,61 @@ a {
   }
 }
 
+.donation {
+  background-color: $color-light-l;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 100px;
+    gap: 30px;
+
+    @media (max-width: 1075px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__img {
+  }
+
+  &__content {
+    max-width: 380px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__h2 {
+    max-width: 300px;
+  }
+
+  &__caption {
+    margin: 0;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+  }
+
+  &__credit-container {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: $color-primary;
+    border-radius: 9px;
+  }
+
+  &__card-number {
+    display: inline-block;
+    margin: 0;
+    padding-left: 15px;
+    letter-spacing: 0.06em;
+  }
+}
 // sass --watch shelter/styles/style.scss shelter/styles/style.css
