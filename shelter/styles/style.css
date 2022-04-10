@@ -784,4 +784,46 @@ a {
   letter-spacing: 0.06em;
 }
 
+.footer {
+  position: relative;
+  padding-top: 40px;
+}
+.footer__container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 16px;
+  margin-bottom: 60px;
+  max-width: 300px;
+  height: 234px;
+}
+.footer__h2 {
+  color: #ffffff;
+}
+@media (max-width: 1000px) {
+  .footer__dog {
+    margin: auto;
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contacts__content {
+  display: inline-block;
+  margin: 0;
+  color: #f1cdb3;
+}
+
 /*# sourceMappingURL=style.css.map */

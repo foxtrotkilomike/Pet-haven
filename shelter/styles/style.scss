@@ -473,4 +473,53 @@ a {
     letter-spacing: 0.06em;
   }
 }
+
+.footer {
+  position: relative;
+  padding-top: 40px;
+
+  &__container {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin-bottom: 60px;
+    max-width: 300px;
+    height: 234px;
+  }
+
+  &__h2 {
+    color: $color-light-xl;
+  }
+
+  &__dog {
+    @media (max-width: 1000px) {
+      margin: auto;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__content {
+    display: inline-block;
+    margin: 0;
+    color: $color-primary;
+  }
+}
+
 // sass --watch shelter/styles/style.scss shelter/styles/style.css
