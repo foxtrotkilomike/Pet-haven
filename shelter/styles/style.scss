@@ -353,11 +353,25 @@ a {
   align-items: center;
   background-color: $color-light-s;
   border-radius: 9px;
+  transition: background-color 0.3s ease-in-out;
 
   & > * {
     margin-bottom: 30px;
   }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-xl;
+
+    .button--border {
+      border: 2px solid $color-primary;
+      border-color: $color-primary-light;
+      background-color: $color-primary-light;
+      transition: background-color 0.2s ease-in;
+    }
+  }
 }
+
 .pet-name {
   margin-top: 0;
   font-family: "Georgia";
@@ -469,6 +483,11 @@ a {
     padding: 10px 15px;
     background-color: $color-primary;
     border-radius: 9px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
   }
 
   &__card-number {
@@ -476,6 +495,7 @@ a {
     margin: 0;
     padding-left: 15px;
     letter-spacing: 0.06em;
+    color: inherit;
   }
 }
 
@@ -525,7 +545,6 @@ a {
   gap: 20px;
 
   &__content {
-    display: inline-block;
     margin: 0;
     letter-spacing: 0.06em;
     color: $color-primary;

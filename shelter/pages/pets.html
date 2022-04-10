@@ -6,14 +6,125 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content=" Our friends who are looking for a house">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="icon" href="../assets/icons/icon-sleeping-area.svg" type="image/x-icon">
+  <meta name="description" content="Shelter for pets in Boston">
   <title>Our pets</title>
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header _container"></header>
-    <main class="main"></main>
-    <footer class="footer _container"></footer>
+    <header class="header">
+      <div class="header__container _container">
+        <div class="header__logo">
+          <h1 class="header__title">
+            <a href="../index.html" class="heading--main">
+              Cozy House
+            </a>
+          </h1>
+          <p class="header__subtitle">Shelter for pets in Boston</p>
+        </div>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="../index.html">About the shelter</a>
+            </li>
+            <li class="menu__item  active">
+              <a class="menu__link" href="#">Our pets</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="../index.html#help">Help the shelter</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="../index.html#contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="pets" id="pets">
+        <div class="_container">
+          <div class="pets__container">
+            <h2 class="pets__heading h2">Our friends who<br>are looking for a house</h2>
+            <div class="pets__slider">
+              <div class="button-container">
+                <a class="button button--border button--border--round" href="#">
+                  <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
+                  </svg></a>
+              </div>
+              <div class="silder__container">
+                <div class="pet-card">
+                  <img src="../assets/images/pets-katrine.png" alt="A gray british breed cat Katrine">
+                  <h3 class="pet-name">Katrine</h3>
+                  <div class="button-container">
+                    <a class="button button--border" href="#">Learn more</a>
+                  </div>
+                </div>
+                <div class="pet-card">
+                  <img src="../assets/images/pets-jennifer.png" alt="A labrador puppy Jennifer">
+                  <h3 class="pet-name">Jennifer</h3>
+                  <div class="button-container">
+                    <a class="button button--border" href="#">Learn more</a>
+                  </div>
+                </div>
+                <div class="pet-card">
+                  <img src="../assets/images/pets-woody.png" alt="A sand-colored smiling dog Woody">
+                  <h3 class="pet-name">Woody</h3>
+                  <div class="button-container">
+                    <a class="button button--border" href="#">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="button-container">
+                <a class="button button--border button--border--round" href="#">
+                  <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="button-container">
+              <a class="button button--filled" href="pages/pets.html">Get to know the rest</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__container _container">
+        <div class="footer__contacts">
+          <h2 class="footer__h2 h2">For questions<br>and suggestions</h2>
+          <div class="contacts">
+            <img src="../assets/icons/icon-email.svg" alt="">
+            <a class="contacts__content" href="mailto:email@shelter.com">email@shelter.com</a>
+          </div>
+          <div class="contacts">
+            <img src="../assets/icons/icon-phone.svg" alt="">
+            <a class="contacts__content" href="tel:+136745677554">+13 674 567 75 54</a>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <h2 class="footer__h2 h2">We are waiting for your visit</h2>
+          <div class="contacts">
+            <img src="../assets/icons/icon-marker.svg" alt="">
+            <a class="contacts__content" href="https://goo.gl/maps/Yb4Vd8AaxFR7Acmc8" target="_blank">1 Central Street,
+              Boston<br>(entrance from the store)</a>
+          </div>
+          <div class="contacts">
+            <img src="../assets/icons/icon-marker.svg" alt="">
+            <a class="contacts__content" href="https://goo.gl/maps/5dKtjKGie9y9BGLZ9" target="_blank">18 South Park,
+              London</a>
+          </div>
+        </div>
+        <img class="footer__dog" src="../assets/images/footer-puppy.png"
+          alt="Puppy that highes five and licks a screen">
+      </div>
+      <div class="_ibg"></div>
+    </footer>
   </div>
 </body>
 
