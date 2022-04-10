@@ -47,93 +47,10 @@ a {
   box-sizing: content-box;
 }
 
-.header {
-  position: absolute;
-  width: 100%;
-  padding: 60px 0;
-  z-index: 10;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__logo {
-  }
-
-  &__title {
-    margin: 0 0 10px;
-    height: 35px;
-    font-size: 32px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 110%;
-    letter-spacing: 0.06em;
-  }
-
-  &__subtitle {
-    margin: 0 0 0 4px;
-    font-family: "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    letter-spacing: 0.1em;
-    color: $color-light-xl;
-  }
-
-  &__menu {
-  }
-}
-
 .heading--main {
   color: $color-primary;
 }
 
-.menu {
-  &__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__item {
-    height: 28px;
-    box-sizing: border-box;
-
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
-  }
-
-  &__link {
-    font-family: "Arial";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: $color-dark-s;
-    transition: color 0.3s ease-in-out;
-
-    &:hover {
-      color: $color-light-s;
-    }
-  }
-}
-
-.active {
-  border-bottom: 3px solid $color-primary;
-
-  a {
-    color: $color-light-s;
-  }
-
-  &:hover {
-    border: none;
-  }
-}
-
-// --------------------MAIN-------------------------
 ._ibg {
   position: absolute;
   top: 0;
@@ -185,13 +102,14 @@ a {
   align-items: center;
   box-sizing: border-box;
   padding: 15px 45px;
-  min-height: 52px;
+  min-height: 50px;
 
   border-radius: 100px;
   color: $color-dark-3xl;
 
   font-size: 17px;
-  line-height: 130%;
+  line-height: 120%;
+  letter-spacing: 0.06em;
 }
 
 .button--filled {
@@ -211,6 +129,7 @@ a {
 
 .button--border {
   border: 2px solid $color-primary;
+  box-sizing: border-box;
   transition: background-color 0.2s ease-in;
 
   &:hover {
@@ -224,6 +143,91 @@ a {
     padding: 0;
   }
 }
+
+//-------------CONTENT---------------------
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 60px 0;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    height: 35px;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+
+  &__subtitle {
+    margin: 0 0 0 4px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+  }
+
+  &__menu {
+    margin-top: 16px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    height: 28px;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-s;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-light-s;
+    }
+  }
+}
+
+.active {
+  border-bottom: 3px solid $color-primary;
+
+  a {
+    color: $color-light-s;
+  }
+
+  &:hover {
+    border: none;
+  }
+}
+
+// --------------------MAIN-------------------------
 
 .main {
   flex: 1 1 auto;
@@ -270,8 +274,7 @@ a {
   }
 
   &__img {
-    width: 100%;
-    height: auto;
+    max-height: 728px;
     align-self: flex-end;
 
     @media (max-width: 1075px) {
@@ -356,6 +359,7 @@ a {
   }
 }
 .pet-name {
+  margin-top: 0;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -383,12 +387,13 @@ a {
   }
 
   &__list {
+    margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-between;
-    gap: 117px;
+    row-gap: 55px;
+    column-gap: 117px;
   }
 
   &__item {
@@ -497,6 +502,10 @@ a {
     margin-bottom: 60px;
     max-width: 300px;
     height: 234px;
+
+    &:first-child {
+      width: 279px;
+    }
   }
 
   &__h2 {
@@ -518,6 +527,7 @@ a {
   &__content {
     display: inline-block;
     margin: 0;
+    letter-spacing: 0.06em;
     color: $color-primary;
   }
 }
