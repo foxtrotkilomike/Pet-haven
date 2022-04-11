@@ -469,10 +469,11 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 15px 45px;
+  padding: 14px 45px;
   min-height: 50px;
   border-radius: 100px;
   color: #292929;
+  cursor: pointer;
   font-size: 17px;
   line-height: 120%;
   letter-spacing: 0.06em;
@@ -480,6 +481,7 @@ a {
 
 .button--filled {
   background-color: #f1cdb3;
+  border: none;
   transition: background-color 0.3s ease-in;
 }
 .button--filled:hover {
@@ -493,6 +495,7 @@ a {
 
 .button--border {
   border: 2px solid #f1cdb3;
+  background-color: transparent;
   box-sizing: border-box;
   transition: background-color 0.2s ease-in;
 }
@@ -535,7 +538,7 @@ a {
   color: #ffffff;
 }
 .header__menu {
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
 .menu__list {
@@ -548,7 +551,7 @@ a {
   box-sizing: border-box;
 }
 .menu__item:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 36px;
 }
 .menu__link {
   font-family: "Arial";
@@ -641,8 +644,17 @@ a {
 .about__content > *:not(:last-child) {
   margin-bottom: 25px;
 }
+.about__content > *:first-child {
+  margin-bottom: 24px;
+}
 .about__h2 {
-  max-width: 370px;
+  max-width: 310px;
+}
+.about__quotation {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  letter-spacing: 1px;
 }
 
 .pets {
@@ -849,6 +861,77 @@ a {
   margin: 0;
   letter-spacing: 0.06em;
   color: #f1cdb3;
+}
+
+.button-slider {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.button--disabled {
+  cursor: default;
+  pointer-events: none;
+  border-color: #cdcdcd;
+  color: #cdcdcd;
+}
+.button--disabled:hover {
+  border-color: #cdcdcd;
+  background-color: transparent;
+}
+
+.header {
+  position: fixed;
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+.header__title {
+  color: #545454;
+}
+.header__title:hover {
+  color: #292929;
+}
+.header__subtitle {
+  color: #292929;
+}
+
+.heading--main {
+  color: inherit;
+}
+
+.menu__link {
+  color: #545454;
+}
+.menu__link:hover {
+  color: #292929;
+}
+
+.active a {
+  color: #545454;
+}
+
+.pets__container {
+  margin-top: 120px;
+}
+.pets__container > *:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.cards__container {
+  width: 100%;
+  padding: 14px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 28px;
+  column-gap: 25px;
+}
+
+.button-container {
+  gap: 20px;
 }
 
 /*# sourceMappingURL=pets.css.map */

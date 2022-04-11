@@ -1,1 +1,86 @@
 @import "style";
+
+.button-slider {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.button--disabled {
+  cursor: default;
+  pointer-events: none;
+  border-color: $color-dark-s;
+  color: $color-dark-s;
+
+  &:hover {
+    border-color: $color-dark-s;
+    background-color: transparent;
+  }
+}
+
+.header {
+  position: fixed;
+  padding: 30px 0;
+  background-color: $color-light-xl;
+
+  &__title {
+    color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+  }
+
+  &__subtitle {
+    color: $color-dark-3xl;
+  }
+}
+
+.heading--main {
+  color: inherit;
+}
+
+.menu {
+  &__link {
+    color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+  }
+}
+
+.active {
+  a {
+    color: $color-dark-l;
+  }
+}
+
+.pets {
+  &__container {
+    margin-top: 120px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.cards {
+  &__container {
+    width: 100%;
+    padding: 14px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 28px;
+    column-gap: 25px;
+  }
+}
+
+.button-container {
+  gap: 20px;
+}

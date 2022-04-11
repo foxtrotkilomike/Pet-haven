@@ -101,11 +101,12 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 15px 45px;
+  padding: 14px 45px;
   min-height: 50px;
 
   border-radius: 100px;
   color: $color-dark-3xl;
+  cursor: pointer;
 
   font-size: 17px;
   line-height: 120%;
@@ -114,6 +115,7 @@ a {
 
 .button--filled {
   background-color: $color-primary;
+  border: none;
   transition: background-color 0.3s ease-in;
 
   &:hover {
@@ -129,6 +131,7 @@ a {
 
 .button--border {
   border: 2px solid $color-primary;
+  background-color: transparent;
   box-sizing: border-box;
   transition: background-color 0.2s ease-in;
 
@@ -180,7 +183,7 @@ a {
   }
 
   &__menu {
-    margin-top: 16px;
+    margin-top: 15px;
   }
 }
 
@@ -196,7 +199,7 @@ a {
     box-sizing: border-box;
 
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 36px;
     }
   }
 
@@ -302,10 +305,21 @@ a {
     & > *:not(:last-child) {
       margin-bottom: 25px;
     }
+
+    & > *:first-child {
+      margin-bottom: 24px;
+    }
   }
 
   &__h2 {
-    max-width: 370px;
+    max-width: 310px;
+  }
+
+  &__quotation {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    letter-spacing: 1px;
   }
 }
 
