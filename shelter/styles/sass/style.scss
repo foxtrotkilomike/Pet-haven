@@ -45,6 +45,10 @@ a {
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: content-box;
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding: 0 30px;
+  }
 }
 
 .heading--main {
@@ -93,7 +97,10 @@ a {
 }
 
 .button-container {
-  display: inline-flex;
+  max-width: fit-content;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin: 0 auto;
+  }
 }
 
 .button {
@@ -101,7 +108,7 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 14px 45px;
+  padding: 13px 44px;
   min-height: 50px;
 
   border-radius: 100px;
@@ -111,6 +118,10 @@ a {
   font-size: 17px;
   line-height: 120%;
   letter-spacing: 0.06em;
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    line-height: 130%;
+  }
 }
 
 .button--filled {
@@ -154,6 +165,10 @@ a {
   width: 100%;
   padding: 60px 0;
   z-index: 10;
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 30px;
+  }
 
   &__container {
     display: flex;
@@ -243,7 +258,7 @@ a {
   &__container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     gap: 30px;
     position: relative;
     left: 0;
@@ -251,9 +266,11 @@ a {
     padding-top: 180px;
     z-index: 5;
 
-    @media (max-width: 1075px) {
+    @media (min-width: 768px) and (max-width: 1279px) {
       flex-direction: column;
       align-items: center;
+      padding-top: 150px;
+      gap: 100px;
     }
   }
 
@@ -263,6 +280,11 @@ a {
 
     & > *:not(:last-child) {
       margin-bottom: 42px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      max-width: 64.9%;
+      padding-top: 0;
     }
   }
 
@@ -281,8 +303,8 @@ a {
     max-height: 728px;
     align-self: flex-end;
 
-    @media (max-width: 1075px) {
-      max-width: 698px;
+    @media (min-width: 768px) and (max-width: 1279px) {
+      max-width: 569px;
     }
   }
 }
@@ -295,13 +317,18 @@ a {
     gap: 120px;
     padding: 80px 0 100px;
 
-    @media (max-width: 960px) {
+    @media (min-width: 768px) and (max-width: 1279px) {
       flex-direction: column-reverse;
+      gap: 80px;
     }
   }
 
   &__content {
     max-width: 430px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      max-width: 60.7%;
+    }
 
     & > *:not(:last-child) {
       margin-bottom: 25px;
@@ -335,7 +362,7 @@ a {
     align-items: center;
 
     & > *:not(:last-child) {
-      margin-bottom: 60px;
+      margin-bottom: 59px;
     }
   }
 
@@ -350,18 +377,31 @@ a {
     align-items: center;
     width: 100%;
     gap: 25px;
+
+    @media (max-width: 830px) {
+      gap: 12px;
+    }
+
+    .button-container {
+      margin: 0;
+    }
   }
 }
 
 .silder__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   max-width: 990px;
+
+  @media (max-width: 830px) {
+    justify-content: space-between;
+  }
 }
 
 .pet-card {
+  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -385,6 +425,16 @@ a {
       transition: background-color 0.2s ease-in;
     }
   }
+
+  .button-container {
+    margin-bottom: 30px;
+  }
+}
+
+.pet-card-13 {
+  @media (max-width: 1279px) {
+    display: none;
+  }
 }
 
 .pet-name {
@@ -403,7 +453,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0 100px;
+    padding: 82px 0 100px;
   }
 
   &__heading {
@@ -413,6 +463,10 @@ a {
 
   &__list-container {
     max-width: 1026px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      padding: 0 39px;
+    }
   }
 
   &__list {
@@ -423,6 +477,11 @@ a {
     justify-content: center;
     row-gap: 55px;
     column-gap: 117px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      justify-content: space-between;
+      column-gap: 60px;
+    }
   }
 
   &__item {
@@ -431,6 +490,10 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 113px;
+
+    @media (max-width: 980px) {
+      width: 170px;
+    }
 
     .item {
       &__icon {
@@ -463,6 +526,7 @@ a {
     @media (max-width: 1075px) {
       flex-direction: column-reverse;
       align-items: center;
+      gap: 60px;
     }
   }
 
@@ -518,6 +582,10 @@ a {
   position: relative;
   padding-top: 40px;
 
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 30px;
+  }
+
   &__container {
     position: relative;
     z-index: 5;
@@ -527,6 +595,10 @@ a {
     align-items: flex-start;
     align-content: center;
     flex-wrap: wrap;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      padding: 0 64px;
+    }
   }
 
   &__contacts {
@@ -540,6 +612,12 @@ a {
 
     &:first-child {
       width: 279px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      padding-top: 0;
+      margin-bottom: 65px;
+      height: 232px;
     }
   }
 
