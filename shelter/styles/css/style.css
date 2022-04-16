@@ -488,6 +488,7 @@ a {
   background-color: #fddcc4;
 }
 .button--filled--round {
+  pointer-events: none;
   width: 52px;
   height: 52px;
   padding: 0;

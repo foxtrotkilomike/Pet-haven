@@ -123,6 +123,7 @@ a {
   }
 
   &--round {
+    pointer-events: none;
     width: 52px;
     height: 52px;
     padding: 0;
@@ -566,3 +567,4 @@ a {
 }
 
 // sass --watch shelter/styles/sass/style.scss shelter/styles/css/style.css
+// sass --watch shelter/styles/sass/pets.scss shelter/styles/css/pets.css

@@ -488,6 +488,7 @@ a {
   background-color: #fddcc4;
 }
 .button--filled--round {
+  pointer-events: none;
   width: 52px;
   height: 52px;
   padding: 0;
@@ -877,10 +878,6 @@ a {
   pointer-events: none;
   border-color: #cdcdcd;
   color: #cdcdcd;
-}
-.button--disabled:hover {
-  border-color: #cdcdcd;
-  background-color: transparent;
 }
 
 .header {
