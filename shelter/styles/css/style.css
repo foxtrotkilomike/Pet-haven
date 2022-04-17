@@ -702,11 +702,9 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.pets__container > *:not(:last-child) {
-  margin-bottom: 59px;
-}
 .pets__heading {
   max-width: 400px;
+  margin-bottom: 59px;
   text-align: center;
 }
 .pets__slider {
@@ -715,6 +713,7 @@ a {
   align-items: center;
   width: 100%;
   gap: 25px;
+  margin-bottom: 59px;
 }
 @media (max-width: 830px) {
   .pets__slider {

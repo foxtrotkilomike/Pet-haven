@@ -360,14 +360,11 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    & > *:not(:last-child) {
-      margin-bottom: 59px;
-    }
   }
 
   &__heading {
     max-width: 400px;
+    margin-bottom: 59px;
     text-align: center;
   }
 
@@ -377,6 +374,7 @@ a {
     align-items: center;
     width: 100%;
     gap: 25px;
+    margin-bottom: 59px;
 
     @media (max-width: 830px) {
       gap: 12px;
