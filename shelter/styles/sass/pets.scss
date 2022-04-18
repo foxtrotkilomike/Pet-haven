@@ -39,11 +39,19 @@
 }
 
 .menu {
+  @media (max-width: 767px) {
+    background-color: $color-dark-s;
+  }
+
   &__link {
     color: $color-dark-l;
 
     &:hover {
       color: $color-dark-3xl;
+
+      @media (max-width: 767px) {
+        color: $color-light-s;
+      }
     }
   }
 }
@@ -51,6 +59,18 @@
 .active {
   a {
     color: $color-dark-l;
+
+    @media (max-width: 767px) {
+      color: $color-light-s;
+    }
+  }
+}
+
+.burger__button {
+  &::before,
+  &::after,
+  & span {
+    background-color: $color-dark-l;
   }
 }
 
