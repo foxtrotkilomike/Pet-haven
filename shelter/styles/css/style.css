@@ -385,6 +385,7 @@ template {
 html,
 body {
   height: 100%;
+  width: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 400;
@@ -424,6 +425,11 @@ a {
   ._container {
     padding: 0 10px;
   }
+}
+
+.noscroll {
+  position: fixed;
+  overflow-y: hidden;
 }
 
 .heading--main {
@@ -503,7 +509,7 @@ a {
   color: #292929;
   cursor: pointer;
   font-size: 17px;
-  line-height: 120%;
+  line-height: 130%;
   letter-spacing: 0.06em;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -547,7 +553,7 @@ a {
   position: absolute;
   width: 100%;
   padding: 60px 0;
-  z-index: 10;
+  z-index: 4;
 }
 @media (max-width: 1279px) {
   .header {
@@ -615,25 +621,10 @@ a {
     justify-content: center;
     height: 100%;
   }
-}
-@media (max-width: 767px) and (max-height: 560px) {
-  .header__menu .menu__wrapper {
-    position: relative;
-    justify-content: flex-start;
-  }
-}
-@media (max-width: 767px) {
   .header__menu .menu__list {
     flex-direction: column;
     align-items: center;
   }
-}
-@media (max-width: 767px) and (max-height: 560px) {
-  .header__menu .menu__list {
-    padding-top: 50px;
-  }
-}
-@media (max-width: 767px) {
   .header__menu .menu__item {
     height: 54px;
     box-sizing: border-box;
@@ -641,6 +632,11 @@ a {
   .header__menu .menu__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) and (max-height: 560px) {
+  .header__menu .menu__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -656,7 +652,7 @@ a {
   left: 0;
   width: 0;
   height: 0;
-  z-index: 2;
+  z-index: 4;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -759,7 +755,7 @@ a {
   left: 0;
   top: 0;
   padding-top: 180px;
-  z-index: 5;
+  z-index: 3;
 }
 @media (max-width: 1279px) {
   .start-screen__container {
@@ -1260,7 +1256,7 @@ a {
 }
 .footer__container {
   position: relative;
-  z-index: 5;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

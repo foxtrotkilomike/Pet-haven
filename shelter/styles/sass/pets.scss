@@ -40,7 +40,7 @@
 
 .menu {
   @media (max-width: 767px) {
-    background-color: $color-dark-s;
+    background-color: $color-light-xl;
   }
 
   &__link {
@@ -48,10 +48,6 @@
 
     &:hover {
       color: $color-dark-3xl;
-
-      @media (max-width: 767px) {
-        color: $color-light-s;
-      }
     }
   }
 }
@@ -59,10 +55,6 @@
 .active {
   a {
     color: $color-dark-l;
-
-    @media (max-width: 767px) {
-      color: $color-light-s;
-    }
   }
 }
 
@@ -128,6 +120,10 @@
       margin-bottom: 40px;
       max-width: 81.9%;
       row-gap: 30px;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1279px) {
+      column-gap: 100px;
     }
 
     @media (max-width: 767px) {
