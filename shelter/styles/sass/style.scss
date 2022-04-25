@@ -594,7 +594,7 @@ a {
       display: grid;
       grid-template-columns: 135px 135px;
       grid-template-rows: auto auto;
-      width: 270px;
+      width: 308px;
       gap: 0;
       row-gap: 21px;
       margin-bottom: 43px;
@@ -604,17 +604,17 @@ a {
       margin: 0;
     }
 
-    .first-button {
+    .left-button {
       @media (max-width: 767px) {
-        margin-left: 43px;
+        margin-left: 62px;
         grid-column: 1 / 2;
         grid-row: 2 / 3;
       }
     }
 
-    .second-button {
+    .right-button {
       @media (max-width: 767px) {
-        margin-left: 40px;
+        margin-left: 21px;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
       }
@@ -622,21 +622,57 @@ a {
   }
 }
 
-.silder__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.silder__basement {
   width: 100%;
-  max-width: 990px;
-
-  @media (max-width: 830px) {
-    justify-content: space-between;
-  }
+  overflow: hidden;
 
   @media (max-width: 767px) {
     grid-column: 1 / span 2;
     grid-row: 1 / 2;
   }
+}
+
+@keyframes translateRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes translateLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -200%;
+  }
+}
+
+.translate-left {
+  animation: translateLeft 0.8s;
+}
+
+.translate-right {
+  animation: translateRight 0.8s;
+}
+
+.silder__container {
+  display: flex;
+  justify-content: space-around;
+  width: 300%;
+  height: 435px;
+  position: relative;
+  left: -100%;
+}
+
+.slide {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 auto;
+  max-width: 1046px;
 }
 
 .pet-card {
@@ -668,17 +704,17 @@ a {
   .button-container {
     margin-bottom: 30px;
   }
-}
 
-.pet-card-13 {
-  @media (max-width: 1279px) {
-    display: none;
+  &:nth-child(3) {
+    @media (max-width: 1279px) {
+      display: none;
+    }
   }
-}
 
-.pet-card-12 {
-  @media (max-width: 767px) {
-    display: none;
+  &:nth-child(2) {
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 

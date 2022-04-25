@@ -99,36 +99,20 @@
           <div class="pets__container">
             <h2 class="pets__heading h2">Our friends who<br>are looking for a house</h2>
             <div class="pets__slider">
-              <div class="button-container first-button">
+              <div class="button-container left-button">
                 <button class="button button--border button--border--round" href="#">
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
                   </svg></button>
               </div>
-              <div class="silder__container">
-                <div class="pet-card pet-card-11">
-                  <img src="assets/images/pets-katrine.png" alt="A gray british breed cat Katrine">
-                  <h3 class="pet-name">Katrine</h3>
-                  <div class="button-container">
-                    <a class="button button--border" href="#">Learn more</a>
-                  </div>
-                </div>
-                <div class="pet-card pet-card-12">
-                  <img src="assets/images/pets-jennifer.png" alt="A labrador puppy Jennifer">
-                  <h3 class="pet-name">Jennifer</h3>
-                  <div class="button-container">
-                    <a class="button button--border" href="#">Learn more</a>
-                  </div>
-                </div>
-                <div class="pet-card pet-card-13">
-                  <img src="assets/images/pets-woody.png" alt="A sand-colored smiling dog Woody">
-                  <h3 class="pet-name">Woody</h3>
-                  <div class="button-container">
-                    <a class="button button--border" href="#">Learn more</a>
-                  </div>
+              <div class="silder__basement">
+                <div class="silder__container">
+                  <div class="slide" id="left-slide"></div>
+                  <div class="slide" id="central-slide"></div>
+                  <div class="slide" id="right-slide"></div>
                 </div>
               </div>
-              <div class="button-container second-button">
+              <div class="button-container right-button">
                 <button class="button button--border button--border--round" href="#">
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
@@ -269,6 +253,16 @@
       <div class="_ibg"></div>
     </footer>
   </div>
+
+  <template id="pet-template">
+    <div class="pet-card">
+      <img src="" alt="">
+      <h3 class="pet-name"></h3>
+      <div class="button-container">
+        <a class="button button--border" href="#">Learn more</a>
+      </div>
+    </div>
+  </template>
   <script src="scripts/script.js" type="module"></script>
 </body>
 
