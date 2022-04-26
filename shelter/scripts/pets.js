@@ -1,6 +1,9 @@
 import petsData from '../assets/pets.json' assert { type: "json" };
 import * as burger from './burger.js'
 
+const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
+const header = document.querySelector('.header');
 const cardsContainer = document.querySelector('.cards__container')
 const petTemplate = document.querySelector('#pet-template').content;
 const petCard = petTemplate.querySelector('.pet-card');
@@ -9,6 +12,17 @@ const prevPageBtn = document.getElementById('prev-page');
 const currPageBtn = document.getElementById('curr-page');
 const nextPageBtn = document.getElementById('next-page');
 const lastPageBtn = document.getElementById('last-page');
+
+const modal = document.querySelector('.modal');
+const modalImg = modal.querySelector('.modal__img');
+const modalHeading = modal.querySelector('.modal__heading');
+const modalBreed = modal.querySelector('.modal__breed');
+const modalCaption = modal.querySelector('.modal__caption');
+const modalListItem1 = modal.querySelector('#modal__list-item-1 span:nth-child(2)');
+const modalListItem2 = modal.querySelector('#modal__list-item-2 span:nth-child(2)');
+const modalListItem3 = modal.querySelector('#modal__list-item-3 span:nth-child(2)');
+const modalListItem4 = modal.querySelector('#modal__list-item-4 span:nth-child(2)');
+const modalButton = modal.querySelector('.modal__button');
 
 const allPetsArray = [];
 for (let i = 0; i < 6; i++) {
@@ -73,7 +87,26 @@ const make16By3 = () => {
   return set16By3;
 }
 
+const fillPopup = (id) => {
+  modalImg.src = `../${petsData[id].img}`;
+  modalImg.alt = petsData[id].type;
+  modalHeading.textContent = petsData[id].name;
+  modalBreed.textContent = `${petsData[id].type} - ${petsData[id].breed}`
+  modalCaption.textContent = petsData[id].description;
+  modalListItem1.textContent = petsData[id].age;
+  modalListItem2.textContent = petsData[id].inoculations.join(', ');
+  modalListItem3.textContent = petsData[id].diseases.join(', ');
+  modalListItem4.textContent = petsData[id].parasites.join(', ');
+};
 
+const closePopup = () => {
+  modal.classList.remove('modal--active');
+  overlay.classList.remove('overlay__active');
+  body.classList.remove('noscroll');
+  header.style.cssText = 'z-index: 4;';
+};
+
+modalButton.addEventListener('click', closePopup);
 
 let petInstances = [];
 
@@ -83,6 +116,7 @@ const pet8CardFactory = () => {
     petInstance.children[0].src = `../${petsData[i].img}`;
     petInstance.children[0].alt = petsData[i].type;
     petInstance.children[1].textContent = petsData[i].name;
+    petInstance.setAttribute('petId', `${i}`);
     petInstances.push(petInstance)
   }
 }
@@ -99,7 +133,15 @@ const makePage = (pageNumber) => {
   if (window.matchMedia("(min-width: 1280px)").matches) {
     set6By8[pageNumber].forEach((petIndex) => {
       let card = petInstances[petIndex].cloneNode(true);
-      cardsContainer.append(card)
+      card.addEventListener('click', () => {
+        fillPopup(card.getAttribute('petid'));
+        modal.classList.add('modal--active');
+        overlay.classList.add('overlay__active');
+        overlay.addEventListener('click', closePopup)
+        body.classList.add('noscroll')
+        header.style.cssText = 'z-index: 3;';
+      });
+      cardsContainer.append(card);
     })
     lastPageNumber = 6;
   }
@@ -107,6 +149,14 @@ const makePage = (pageNumber) => {
   if (window.matchMedia("(min-width: 768px) and (max-width: 1279px)").matches) {
     set8By6[pageNumber].forEach((petIndex) => {
       let card = petInstances[petIndex].cloneNode(true);
+      card.addEventListener('click', () => {
+        fillPopup(card.getAttribute('petid'));
+        modal.classList.add('modal--active');
+        overlay.classList.add('overlay__active');
+        overlay.addEventListener('click', closePopup);
+        body.classList.add('noscroll');
+        header.style.cssText = 'z-index: 3;';
+      });
       cardsContainer.append(card)
     })
     lastPageNumber = 8;
@@ -115,6 +165,14 @@ const makePage = (pageNumber) => {
   if (window.matchMedia("(min-width: 320px) and (max-width: 767px)").matches) {
     set16By3[pageNumber].forEach((petIndex) => {
       let card = petInstances[petIndex].cloneNode(true);
+      card.addEventListener('click', () => {
+        fillPopup(card.getAttribute('petid'));
+        modal.classList.add('modal--active');
+        overlay.classList.add('overlay__active');
+        overlay.addEventListener('click', closePopup);
+        body.classList.add('noscroll');
+        header.style.cssText = 'z-index: 3;';
+      });
       cardsContainer.append(card)
     })
     lastPageNumber = 16;
