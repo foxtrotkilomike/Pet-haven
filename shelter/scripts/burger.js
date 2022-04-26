@@ -19,16 +19,14 @@ burgerButton.addEventListener('click', ()=>{
   burgerButton.classList.toggle('menu--active');
   if (headerContainer.querySelector('.menu--active')) {
     overlay.classList.add('overlay__active');
-    overlay.addEventListener('click', () => hideMenu() )
+    overlay.addEventListener('click', hideMenu)
     body.classList.add('noscroll')
   } else {
     overlay.classList.remove('overlay__active');
-    overlay.removeEventListener('click', () => hideMenu() )
+    overlay.removeEventListener('click', hideMenu)
     body.classList.remove('noscroll')
   }
 
 })
 
-menuList.addEventListener('click', ()=> {
-  hideMenu();
-})
+menuList.addEventListener('click', hideMenu)
