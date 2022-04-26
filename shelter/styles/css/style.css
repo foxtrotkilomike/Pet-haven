@@ -1407,7 +1407,7 @@ a {
 @media (min-width: 320px) and (max-width: 767px) {
   .modal {
     padding: 10px;
-    width: 240px;
+    width: 220px;
     height: auto;
   }
 }
@@ -1530,6 +1530,11 @@ a {
   position: absolute;
   top: -52px;
   right: -42px;
+}
+@media (max-width: 767px) {
+  .modal__button {
+    right: -30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

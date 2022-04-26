@@ -136,21 +136,17 @@
   }
 }
 
-.pet-card--disabled {
-  @media (max-width: 767px) {
-    display: none;
+.pet-card {
+  &:nth-child(3) {
+    @media (max-width: 1279px) {
+      display: flex;
+    }
   }
-}
 
-.pet-card-23 {
-  @media (min-width: 768px) and (max-width: 1279px) {
-    display: none;
-  }
-}
-
-.pet-card-24 {
-  @media (min-width: 768px) and (max-width: 1279px) {
-    display: none;
+  &:nth-child(2) {
+    @media (max-width: 767px) {
+      display: flex;
+    }
   }
 }
 
