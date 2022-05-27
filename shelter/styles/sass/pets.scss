@@ -1,0 +1,160 @@
+@import "style";
+
+.button-slider {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.button--disabled {
+  cursor: default;
+  pointer-events: none;
+  border-color: $color-dark-s;
+  color: $color-dark-s;
+}
+
+.header {
+  position: fixed;
+  padding: 30px 0;
+  background-color: $color-light-xl;
+
+  &__title {
+    color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+  }
+
+  &__subtitle {
+    color: $color-dark-3xl;
+  }
+}
+
+.heading--main {
+  color: inherit;
+}
+
+.menu {
+  @media (max-width: 767px) {
+    background-color: $color-light-xl;
+  }
+
+  &__link {
+    color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+  }
+}
+
+.active {
+  a {
+    color: $color-dark-l;
+  }
+}
+
+.burger__button {
+  &::before,
+  &::after,
+  & span {
+    background-color: $color-dark-l;
+  }
+}
+
+.pets {
+  padding: 120px 0 100px;
+
+  @media (max-width: 1279px) {
+    padding-bottom: 76px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 42px;
+  }
+
+  &__container {
+    margin-top: 80px;
+
+    @media (max-width: 1279px) {
+      margin-top: 60px;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 42px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 45px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 42px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    &__heading {
+      margin: 20px 0 29px;
+    }
+  }
+}
+
+.cards {
+  &__container {
+    width: 100%;
+    padding: 14px 0 15px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 25px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      padding: 0;
+      margin-bottom: 40px;
+      max-width: 81.9%;
+      row-gap: 30px;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1279px) {
+      column-gap: 100px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
+      margin-bottom: 44px;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 31px;
+    }
+  }
+}
+
+.pet-card {
+  &:nth-child(3) {
+    @media (max-width: 1279px) {
+      display: flex;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+}
+
+.button-container-multiple {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+}

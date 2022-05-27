@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.8.6",
+    "linthtml-config-htmlacademy": "^1.0.3"
+  }
+}
