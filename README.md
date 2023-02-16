@@ -2,7 +2,7 @@
 ## Shelter
 Two-page site, made using Figma [layout](https://www.figma.com/file/tKcmzkARtMUFQAR9VLdLkl/shelter-dom)
 
-*Deployment* - https://rolling-scopes-school.github.io/foxtrotkilomike-JSFE2022Q1/shelter/
+*Deploy* - https://foxtrotkilomike.github.io/Pet-haven/
 
 ![image](https://user-images.githubusercontent.com/83244224/162710591-db2fca97-da24-4ebe-b1e7-4c6b68993e12.png)
 
