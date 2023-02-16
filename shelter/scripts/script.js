@@ -1,4 +1,4 @@
-import petsData from '../assets/pets.json' assert { type: "json" };
+import petsData from './petsData.js'
 import * as burger from './burger.js'
 import * as slider from './slider.js'
 import { getUniquePetId, pet3CardFactory } from './pet3Factory.js'
@@ -15,7 +15,3 @@ const menuList = document.querySelector('.menu__list');
 const sliderContainer = document.querySelector('.silder__container');
 const petTemplate = document.querySelector('#pet-template').content;
 const petCard = petTemplate.querySelector('.pet-card');
-
-
-
-
